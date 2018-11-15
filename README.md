@@ -1,4 +1,5 @@
 My personal portfolio, built using React.
+https://travis-ci.org/davinaizer/react-portfolio.svg?branch=master
 
 ## Available Scripts
 
