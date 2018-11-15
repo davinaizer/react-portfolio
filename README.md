@@ -1,5 +1,9 @@
 My personal portfolio, built using React.
+
+## Status
+
 [![Build Status](https://travis-ci.org/davinaizer/react-portfolio.svg?branch=master)](https://travis-ci.org/davinaizer/react-portfolio)
+[![Coverage Status](https://coveralls.io/repos/github/davinaizer/react-portfolio/badge.svg?branch=master)](https://coveralls.io/github/davinaizer/react-portfolio?branch=master)
 
 ## Available Scripts
 
