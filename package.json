@@ -26,5 +26,13 @@
   ],
   "devDependencies": {
     "coveralls": "^3.0.2"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!/node_modules/",
+      "!src/index.js",
+      "!src/registerServiceWorker.js"
+    ]
   }
 }
