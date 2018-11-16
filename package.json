@@ -32,7 +32,7 @@
       "src/**/*.{js,jsx}",
       "!/node_modules/",
       "!src/index.js",
-      "!src/registerServiceWorker.js"
+      "!src/serviceWorker.js"
     ]
   }
 }
