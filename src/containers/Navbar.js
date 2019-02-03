@@ -1,15 +1,9 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import {
-  Collapse,
-  Navbar,
-  NavLink,
-  NavbarToggler,
-  Nav,
-  NavItem,
-} from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap';
 
-import './TopNav.scss';
+import './Navbar.scss';
 
 export default class TopNav extends Component {
   constructor(props) {
@@ -36,10 +30,6 @@ export default class TopNav extends Component {
 
   render() {
     const { links } = this.props;
-
-    //if no props
-    if (!links) return '<div />';
-
     const navLinks = links.filter(item => item.isVisible !== false);
 
     return (
@@ -72,11 +62,5 @@ export default class TopNav extends Component {
 }
 
 TopNav.propTypes = {
-  links: PropTypes.arrayOf(
-    PropTypes.shape({
-      path: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      isVisible: PropTypes.bool,
-    })
-  ),
+  links: PropTypes.array,
 };
