@@ -7,20 +7,22 @@ import TagList from './TagList';
 import './WorkItem.scss';
 
 // IMAGE BULK LOAD
-let cache = {};
-function importAll(r) {
-  r.keys().forEach(key => (cache[key] = r(key)));
-}
-importAll(require.context('../assets/works', true, /\.(png|jp(e*)g|svg)$/));
 
-const publicPatch = process.env.NODE_ENV === 'production' ? '/myportfolio' : '';
+// let cache = {};
+// function importAll(r) {
+//   r.keys().forEach(key => (cache[key] = r(key)));
+// }
+// importAll(require.context('../assets/works', true, /\.(png|jp(e*)g|svg)$/));
+
+const publicPatch =
+  process.env.NODE_ENV === 'production' ? '/myportfolio' : '.';
 
 const WorkItem = ({ id, thumb, title, summary, tags, isFlipped }) => (
   <Row noGutters className="work-item">
     <Col md="6">
       <div className="work-item__thumb">
         <Link to={'/work/' + id}>
-          <img src={publicPatch + '/assets/' + thumb} alt={title} />
+          <img src={publicPatch + thumb} alt={title} />
         </Link>
       </div>
     </Col>

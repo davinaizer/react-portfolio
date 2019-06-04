@@ -41,9 +41,20 @@ const Resume = () => (
             <li>
               <p>
                 <span className="resume__subtitle">
-                  2017-Present
+                  2019-Present
                   <br />
-                  FREELANCE FRONT-END DEVELOPER
+                  FRONT-END DEVELOPER
+                </span>
+                <br />
+                Gamesys London, UK
+              </p>
+            </li>
+            <li>
+              <p>
+                <span className="resume__subtitle">
+                  2017-2019
+                  <br />
+                  FREELANCE E-LEARNING & FRONT-END DEVELOPER
                 </span>
               </p>
             </li>

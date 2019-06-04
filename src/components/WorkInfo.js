@@ -14,12 +14,12 @@ export default class WorkInfo extends Component {
   }
 
   render() {
-    // debugger;
     const { data, match } = this.props;
     const workData = data[parseInt(match.params.id)];
     const { title, description, images, links, tags } = workData;
+
     const gallery = images.gallery.map(item => ({
-      src: publicPatch + '/assets/' + item,
+      src: publicPatch + item,
       caption: '',
     }));
 
