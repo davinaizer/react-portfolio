@@ -9,7 +9,7 @@ const routes = [
         path: '/work',
         title: 'Work',
         Component: Work,
-        data: { data: AppData.work },
+        data: { data: AppData.works },
     },
     {
         path: '/work/:id',
