@@ -162,7 +162,7 @@ const Resume = () => (
 
         <Col lg={{ size: 9, offset: 3 }}>
           <span className="resume__subtitle">FRAMEWORKS/LIBRARIES</span>
-          <p>jQuery, BackboneJS, ReactJS, Bootstrap, GSAP</p>
+          <p>BackboneJS, ReactJS, Bootstrap, GSAP</p>
         </Col>
 
         <Col lg={{ size: 9, offset: 3 }}>
@@ -172,7 +172,7 @@ const Resume = () => (
 
         <Col lg={{ size: 9, offset: 3 }}>
           <span className="resume__subtitle">DEV TOOLS/IDE</span>
-          <p>Sublime Text, VS Code, IntelliJ IDEA</p>
+          <p>Sublime Text, VSCode, IntelliJ IDEA</p>
         </Col>
 
         <Col lg={{ size: 9, offset: 3 }}>
@@ -206,7 +206,6 @@ const Resume = () => (
             <li>Flexibility</li>
             <li>Communication</li>
             <li>Teamworking</li>
-            <li>Attention to Detail</li>
             <li>Self-Starter Attitude</li>
             <li>Analytical and Problem Solver</li>
             <li>Quality-oriented</li>

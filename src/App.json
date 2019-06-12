@@ -1,5 +1,5 @@
 {
-  "work": [
+  "works": [
     {
       "id": 0,
       "title": "My Portfolio",
@@ -21,17 +21,7 @@
           "url": "https://github.com/davinaizer/myportfolio"
         }
       ],
-      "tags": [
-        "HTML",
-        "JS",
-        "SASS",
-        "ES6",
-        "Babel",
-        "ReactJS",
-        "Webpack",
-        "Bootstrap",
-        "GitHub"
-      ]
+      "tags": ["HTML", "JS", "SASS", "ES6", "Babel", "ReactJS", "Webpack", "Bootstrap", "GitHub"]
     },
     {
       "id": 1,
@@ -111,16 +101,7 @@
           "url": "http://davinaizer.atwebpages.com/proj_501_16.3_treinamento_multiplicadores_quiz/"
         }
       ],
-      "tags": [
-        "HTML",
-        "SASS",
-        "JS",
-        "ES6",
-        "BackboneJS",
-        "Bootstrap",
-        "Gulp",
-        "Webpack"
-      ]
+      "tags": ["HTML", "SASS", "JS", "ES6", "BackboneJS", "Bootstrap", "Gulp", "Webpack"]
     },
     {
       "id": 3,
@@ -149,16 +130,7 @@
           "url": "https://github.com/davinaizer/unbox_website"
         }
       ],
-      "tags": [
-        "HTML",
-        "SASS",
-        "JS",
-        "ES6",
-        "BackboneJS",
-        "Bootstrap",
-        "Gulp",
-        "Webpack"
-      ]
+      "tags": ["HTML", "SASS", "JS", "ES6", "BackboneJS", "Bootstrap", "Gulp", "Webpack"]
     },
     {
       "id": 4,
@@ -176,18 +148,7 @@
         ]
       },
       "links": [],
-      "tags": [
-        "HTML",
-        "SASS",
-        "JS",
-        "Bootstrap",
-        "AWS",
-        "EC2",
-        "Ubuntu",
-        "LAMP",
-        "Webmin",
-        "e-Learning"
-      ]
+      "tags": ["HTML", "SASS", "JS", "Bootstrap", "AWS", "EC2", "Ubuntu", "LAMP", "Webmin", "e-Learning"]
     }
   ]
 }
