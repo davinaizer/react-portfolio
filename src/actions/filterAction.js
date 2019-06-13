@@ -1,4 +1,4 @@
-import { GET_WORK_BY_ID , GET_WORK_LIST } from './types';
+import { GET_WORK_BY_ID, GET_WORK_LIST } from './types';
 
 const filterAll = payload => ({
     type: GET_WORK_LIST,
@@ -10,7 +10,7 @@ const filterById = payload => ({
     payload,
 });
 
-const getWorkList = id => (dispatch, getState) => {
+const getWorkListAction = () => (dispatch, getState) => {
     dispatch(filterAll(getState().config.workList));
 };
 
@@ -19,4 +19,4 @@ const getWorkByIdAction = id => (dispatch, getState) => {
     dispatch(filterById(workItem));
 };
 
-export default { getWorkByIdAction, getWorkList };
+export default { getWorkByIdAction, getWorkListAction };

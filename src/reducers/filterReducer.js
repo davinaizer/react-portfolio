@@ -1,7 +1,7 @@
-import { GET_WORK_BY_ID } from '../actions/types';
+import { GET_WORK_BY_ID, GET_WORK_LIST } from '../actions/types';
 
 const initialState = {
-    filteredWorks: {},
+    filteredWorks: [],
 };
 
 const filterReducer = (state = initialState, action) => {
@@ -12,6 +12,11 @@ const filterReducer = (state = initialState, action) => {
                 filteredWorks: action.payload,
             };
 
+        case GET_WORK_LIST:
+            return {
+                ...state,
+                filteredWorks: action.payload,
+            };
         default:
             return state;
     }
