@@ -10,14 +10,15 @@ import getWorkByIdAction from '../actions/filterAction';
 
 import './WorkInfo.scss';
 
-const WorkInfo = ({ match, isDataLoaded, workItem, filterWorks }) => {
+const WorkInfo = ({ match, workItem, filterWorksById }) => {
     useEffect(() => {
-        filterWorks(match.params.id);
-    }, [filterWorks, match.params.id]);
+        filterWorksById(match.params.id);
+    }, [filterWorksById, match.params.id]);
 
     const createMarkup = value => ({ __html: value });
 
-    const getWorkIndoSection = () => {
+    const getWorkInfoSection = workItem => {
+        console.log('LOG: WorkInfo -> workItem', workItem);
         const { title, description, images, links, tags } = workItem;
         const publicPatch = process.env.NODE_ENV === 'production' ? '/myportfolio' : '';
         const gallery = images.gallery.map(item => ({
@@ -66,25 +67,23 @@ const WorkInfo = ({ match, isDataLoaded, workItem, filterWorks }) => {
 
     return (
         <section id="work-info" className="work-info-section">
-            {isDataLoaded ? <p>Loading 1,2,3...</p> : <p>Loading...</p>}
+            {console.log('LOG: WorkInfo -> workItem', workItem)};
         </section>
     );
 };
 
 WorkInfo.propTypes = {
     match: PropTypes.shape({}).isRequired,
-    isDataLoaded: PropTypes.bool.isRequired,
-    workItem: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
-    filterWorks: PropTypes.func.isRequired,
+    workItem: PropTypes.object,
+    filterWorksById: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
-    isDataLoaded: state.config.isDataLoaded,
-    workItem: state.filter.workItem,
+    workItem: state.filter.filteredWorks,
 });
 
 const mapDispatchToProps = dispatch => ({
-    filterWorks: id => dispatch(getWorkByIdAction(id)),
+    filterWorksById: id => dispatch(getWorkByIdAction(id)),
 });
 
 export default connect(

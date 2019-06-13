@@ -29,12 +29,12 @@ const Router = ({ setConfig, isDataLoaded }) => {
                             <Navbar links={routes} />
                             <ScrollToTop>
                                 <Switch>
-                                    {routes.map(({ path, Component, data }) => (
+                                    {routes.map(({ path, Component }) => (
                                         <Route
                                             key={path}
                                             exact
                                             path={path}
-                                            render={props => <Component {...data} {...props} />}
+                                            render={props => <Component {...props} />}
                                         />
                                     ))}
                                 </Switch>

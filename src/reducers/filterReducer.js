@@ -1,7 +1,7 @@
 import { GET_WORK_BY_ID } from '../actions/types';
 
 const initialState = {
-    workItem: { title: '', description: '', images: [], links: '', tags: '' },
+    filteredWorks: {},
 };
 
 const filterReducer = (state = initialState, action) => {
@@ -9,7 +9,7 @@ const filterReducer = (state = initialState, action) => {
         case GET_WORK_BY_ID:
             return {
                 ...state,
-                workItem: action.payload,
+                filteredWorks: action.payload,
             };
 
         default:

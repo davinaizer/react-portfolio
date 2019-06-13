@@ -5,21 +5,21 @@ import { WorkList } from '../components';
 
 import './Work.scss';
 
-const Work = ({ data }) => (
-  <section id="work" className="work-section">
-    <Container>
-      <div className="mb-5">
-        <h2 className="section__title">Work</h2>
-        <hr className="title__separator ml-0" />
-      </div>
+const Work = () => (
+    <section id="work" className="work-section">
+        <Container>
+            <div className="mb-5">
+                <h2 className="section__title">Work</h2>
+                <hr className="title__separator ml-0" />
+            </div>
 
-      <WorkList items={data} />
-    </Container>
-  </section>
+            <WorkList />
+        </Container>
+    </section>
 );
 
 Work.propTypes = {
-  data: PropTypes.array,
+    data: PropTypes.array,
 };
 
 export default Work;
