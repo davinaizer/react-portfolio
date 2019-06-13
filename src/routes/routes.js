@@ -1,7 +1,7 @@
 import { About, Home, Contact, Resume, Work } from '../containers';
 import { WorkInfo } from '../components';
 
-const AppData = require('../App.json');
+const AppData = require('../config/config.json');
 const routes = [
     { path: '/', title: 'Home', Component: Home, isVisible: false },
     { path: '/about', title: 'About', Component: About },
@@ -16,7 +16,7 @@ const routes = [
         title: 'Work',
         Component: WorkInfo,
         isVisible: false,
-        data: { data: AppData.work },
+        data: { data: AppData.works },
     },
     { path: '/resume', title: 'Resume', Component: Resume },
     { path: '/contact', title: 'Contact', Component: Contact },

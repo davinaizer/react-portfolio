@@ -1,5 +1,5 @@
-import jsonData from '../App.json';
+import jsonData from '../config/config.json';
 
 const getConfigData = () => JSON.parse(JSON.stringify(jsonData));
 
-export default getConfigData;
+export { getConfigData };
