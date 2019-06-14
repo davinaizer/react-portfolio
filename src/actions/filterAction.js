@@ -10,13 +10,9 @@ const filterById = payload => ({
     payload,
 });
 
-const getWorkListAction = () => (dispatch, getState) => {
-    dispatch(filterAll(getState().config.workList));
-};
-
 const getWorkByIdAction = id => (dispatch, getState) => {
     const workItem = getState().config.workList[id];
     dispatch(filterById(workItem));
 };
 
-export default { getWorkByIdAction, getWorkListAction };
+export default { getWorkByIdAction };

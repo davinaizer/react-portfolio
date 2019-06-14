@@ -1,10 +1,9 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import WorkItem from './WorkItem';
 
-const WorkList = ({ filteredWorks }) => {
-    const workList = filteredWorks.map((item, index) => (
+const WorkList = ({ works }) => {
+    const workList = works.map((item, index) => (
         <WorkItem
             key={item.id}
             id={item.id}
@@ -20,13 +19,7 @@ const WorkList = ({ filteredWorks }) => {
 };
 
 WorkItem.propTypes = {
-    filteredWorks: PropTypes.object,
+    works: PropTypes.array.isRequired,
 };
 
-const mapStateToProps = state => {
-    return {
-        filteredWorks: state.filter.filteredWorks,
-    };
-};
-
-export default connect(mapStateToProps)(WorkList);
+export default WorkList;

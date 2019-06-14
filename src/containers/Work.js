@@ -1,11 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Container } from 'reactstrap';
 import { WorkList } from '../components';
 
 import './Work.scss';
 
-const Work = () => (
+const Work = ({ workList }) => (
     <section id="work" className="work-section">
         <Container>
             <div className="mb-5">
@@ -13,7 +14,7 @@ const Work = () => (
                 <hr className="title__separator ml-0" />
             </div>
 
-            <WorkList />
+            <WorkList works={workList} />
         </Container>
     </section>
 );
@@ -22,4 +23,10 @@ Work.propTypes = {
     data: PropTypes.array,
 };
 
-export default Work;
+const mapStateToProps = state => {
+    return {
+        workList: state.config.workList,
+    };
+};
+
+export default connect(mapStateToProps)(Work);
