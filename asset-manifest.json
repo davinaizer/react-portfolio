@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/react-portfolio/static/css/main.60672521.chunk.css",
+    "main.js": "/react-portfolio/static/js/main.7ebbc3f6.chunk.js",
+    "main.js.map": "/react-portfolio/static/js/main.7ebbc3f6.chunk.js.map",
+    "runtime~main.js": "/react-portfolio/static/js/runtime~main.f974a8eb.js",
+    "runtime~main.js.map": "/react-portfolio/static/js/runtime~main.f974a8eb.js.map",
+    "static/js/2.e57720c7.chunk.js": "/react-portfolio/static/js/2.e57720c7.chunk.js",
+    "static/js/2.e57720c7.chunk.js.map": "/react-portfolio/static/js/2.e57720c7.chunk.js.map",
+    "index.html": "/react-portfolio/index.html",
+    "precache-manifest.9f64cd82c0cf5011c34b320b79426bae.js": "/react-portfolio/precache-manifest.9f64cd82c0cf5011c34b320b79426bae.js",
+    "service-worker.js": "/react-portfolio/service-worker.js",
+    "static/css/main.60672521.chunk.css.map": "/react-portfolio/static/css/main.60672521.chunk.css.map",
+    "static/media/201810_cv_davi_naizer.pdf": "/react-portfolio/static/media/201810_cv_davi_naizer.eb3750df.pdf",
+    "static/media/About.scss": "/react-portfolio/static/media/about-bg.afebcbcd.jpg",
+    "static/media/Work.scss": "/react-portfolio/static/media/work-bg.b204d52b.jpg",
+    "static/media/Contact.scss": "/react-portfolio/static/media/contact-bg.e6d26983.jpg",
+    "static/media/file-pdf.svg": "/react-portfolio/static/media/file-pdf.c7dfa61a.svg",
+    "static/media/social_envelope-square.svg": "/react-portfolio/static/media/social_envelope-square.eebf9e60.svg",
+    "static/media/social_facebook.svg": "/react-portfolio/static/media/social_facebook.d5cf4b7f.svg",
+    "static/media/social_github.svg": "/react-portfolio/static/media/social_github.fa5f9f53.svg",
+    "static/media/social_linkedin.svg": "/react-portfolio/static/media/social_linkedin.2882d1a1.svg"
+  }
+}
