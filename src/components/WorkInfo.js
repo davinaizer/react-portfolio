@@ -6,19 +6,18 @@ import { Link } from 'react-router-dom';
 import { Container, Row, Col, Button, UncontrolledCarousel } from 'reactstrap';
 import { TagList, LinkList } from './';
 
-import getWorkByIdAction from '../actions/filterAction';
+import filterByIdAction from '../actions/filterAction';
 
 import './WorkInfo.scss';
 
-const WorkInfo = ({ match, workItem, filterWorksById }) => {
+const WorkInfo = ({ match, workItem, filterById }) => {
     useEffect(() => {
-        filterWorksById(match.params.id);
-    }, [filterWorksById, match.params.id]);
+        filterById(match.params.id);
+    }, [filterById, match.params.id]);
 
     const createMarkup = value => ({ __html: value });
 
     const getWorkInfoSection = workItem => {
-        console.log('LOG: WorkInfo -> workItem', workItem);
         const { title, description, images, links, tags } = workItem;
         const publicPatch = process.env.NODE_ENV === 'production' ? '/myportfolio' : '';
         const gallery = images.gallery.map(item => ({
@@ -35,20 +34,16 @@ const WorkInfo = ({ match, workItem, filterWorksById }) => {
                                 <Button color="primary">Back</Button>
                             </Link>
                         </div>
-
                         <TagList items={tags} />
                     </Col>
 
                     <Col sm={12}>
                         <h2 className="section__title">{title}</h2>
                         <hr className="title__separator ml-0" />
-
                         <UncontrolledCarousel className="work-info__gallery" items={gallery} />
-
                         <div className="work-info__description">
                             <p dangerouslySetInnerHTML={createMarkup(description)} />
                         </div>
-
                         <LinkList className="work-info__links" items={links} />
                     </Col>
 
@@ -67,23 +62,23 @@ const WorkInfo = ({ match, workItem, filterWorksById }) => {
 
     return (
         <section id="work-info" className="work-info-section">
-            {console.log('LOG: WorkInfo -> workItem', workItem)};
+            {workItem.length >= 1 && getWorkInfoSection(workItem[0])};
         </section>
     );
 };
 
 WorkInfo.propTypes = {
     match: PropTypes.shape({}).isRequired,
-    workItem: PropTypes.object,
-    filterWorksById: PropTypes.func.isRequired,
+    workItem: PropTypes.array.isRequired,
+    filterById: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
-    workItem: state.filter.filteredWorks,
+    workItem: state.filter.works,
 });
 
 const mapDispatchToProps = dispatch => ({
-    filterWorksById: id => dispatch(getWorkByIdAction(id)),
+    filterById: id => dispatch(filterByIdAction(id)),
 });
 
 export default connect(

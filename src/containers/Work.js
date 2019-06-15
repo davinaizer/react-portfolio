@@ -14,13 +14,13 @@ const Work = ({ workList }) => (
                 <hr className="title__separator ml-0" />
             </div>
 
-            <WorkList works={workList} />
+            <WorkList items={workList} />
         </Container>
     </section>
 );
 
 Work.propTypes = {
-    data: PropTypes.array,
+    workList: PropTypes.array,
 };
 
 const mapStateToProps = state => {

@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import WorkItem from './WorkItem';
 
-const WorkList = ({ works }) => {
-    const workList = works.map((item, index) => (
+const WorkList = ({ items }) => {
+    return items.map((item, index) => (
         <WorkItem
             key={item.id}
             id={item.id}
@@ -14,12 +14,14 @@ const WorkList = ({ works }) => {
             isFlipped={(index + 1) % 2 === 0 ? true : undefined}
         />
     ));
-
-    return workList;
 };
 
 WorkItem.propTypes = {
-    works: PropTypes.array.isRequired,
+    items: PropTypes.array.isRequired,
+};
+
+WorkItem.defaultProps = {
+    items: [],
 };
 
 export default WorkList;

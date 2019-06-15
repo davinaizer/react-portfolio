@@ -1,22 +1,17 @@
-import { GET_WORK_BY_ID, GET_WORK_LIST } from '../actions/types';
+import { FILTER_BY_ID } from '../actions/types';
 
 const initialState = {
-    filteredWorks: [],
+    works: [],
 };
 
 const filterReducer = (state = initialState, action) => {
     switch (action.type) {
-        case GET_WORK_BY_ID:
+        case FILTER_BY_ID:
             return {
                 ...state,
-                filteredWorks: action.payload,
+                works: action.payload,
             };
 
-        case GET_WORK_LIST:
-            return {
-                ...state,
-                filteredWorks: action.payload,
-            };
         default:
             return state;
     }
