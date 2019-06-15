@@ -3,29 +3,43 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import routes from './routes';
 import { getConfigData } from '../utils/ConfigHelper';
 import setConfigAction from '../actions/configAction';
 
-import { Navbar } from '../containers';
-import { ScrollToTop, Spinner } from '../components';
+import { ScrollToTop, Spinner, WorkInfo } from '../components';
+import { About, Home, Contact, Resume, Work, Navbar } from '../containers';
 
 // remote server base path
 const publicPath = process.env.NODE_ENV === 'production' ? '/myportfolio' : null;
+const routes = [
+    { path: '/', title: 'Home', Component: Home, isVisible: false },
+    { path: '/about', title: 'About', Component: About },
+    {
+        path: '/work',
+        title: 'Work',
+        Component: Work,
+    },
+    {
+        path: '/work/:id',
+        title: 'Work',
+        Component: WorkInfo,
+        isVisible: false,
+    },
+    { path: '/resume', title: 'Resume', Component: Resume },
+    { path: '/contact', title: 'Contact', Component: Contact },
+];
 
 const Router = ({ setConfig, isDataLoaded }) => {
-    const loadData = getConfigData();
-
     useEffect(() => {
-        setConfig(loadData);
-    }, [setConfig, loadData]);
+        setConfig(getConfigData());
+    }, [setConfig]);
 
     return (
         <BrowserRouter basename={publicPath}>
             {isDataLoaded ? (
                 <Route
                     render={() => (
-                        <div>
+                        <>
                             <Navbar links={routes} />
                             <ScrollToTop>
                                 <Switch>
@@ -39,7 +53,7 @@ const Router = ({ setConfig, isDataLoaded }) => {
                                     ))}
                                 </Switch>
                             </ScrollToTop>
-                        </div>
+                        </>
                     )}
                 />
             ) : (
