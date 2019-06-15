@@ -121,7 +121,7 @@ const Resume = () => (
                   COMPUTER ENGINEERING
                 </span>
                 <br />
-                Positivo University, Curitiba-PR
+                Positivo University, Brazil, Curitiba-PR
               </p>
             </li>
             <li>
@@ -132,7 +132,7 @@ const Resume = () => (
                   ELECTRICAL ENGINEERING
                 </span>
                 <br />
-                Positivo University, Curitiba-PR
+                Positivo University, Brazil, Curitiba-PR
               </p>
             </li>
             <li>
@@ -143,7 +143,7 @@ const Resume = () => (
                   ELECTRONICS
                 </span>
                 <br />
-                Federal University of Technology - Paraná (UTFPR)
+                Federal University of Technology - Brazil, Paraná (UTFPR)
               </p>
             </li>
           </ul>
@@ -162,12 +162,12 @@ const Resume = () => (
 
         <Col lg={{ size: 9, offset: 3 }}>
           <span className="resume__subtitle">FRAMEWORKS/LIBRARIES</span>
-          <p>BackboneJS, ReactJS, Bootstrap, GSAP</p>
+          <p>BackboneJS, Bootstrap, React, Redux </p>
         </Col>
 
         <Col lg={{ size: 9, offset: 3 }}>
           <span className="resume__subtitle">SERVER-SIDE/CLOUD</span>
-          <p>Linux, LAMP, AWS, EC2</p>
+          <p>Linux, LAMP, AWS EC2</p>
         </Col>
 
         <Col lg={{ size: 9, offset: 3 }}>
@@ -191,8 +191,8 @@ const Resume = () => (
         </Col>
 
         <Col lg={{ size: 9, offset: 3 }}>
-          <span className="resume__subtitle">MANAGEMENT</span>
-          <p>Trello, Toggl, Microsoft Project, Merlin Project</p>
+          <span className="resume__subtitle">PROJECT TRACKING/MANAGEMENT</span>
+          <p>Trello, Toggl, JIRA, Microsoft Project, Merlin Project</p>
         </Col>
       </Row>
 
