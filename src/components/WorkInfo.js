@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Button, UncontrolledCarousel } from 'reactstrap';
@@ -10,14 +10,17 @@ import filterByIdAction from '../actions/filterAction';
 
 import './WorkInfo.scss';
 
-const WorkInfo = ({ match, workItem, filterById }) => {
+const WorkInfo = ({ match }) => {
+    const dispatch = useDispatch();
+    const filteredWorks = useSelector(state => state.filter.works);
+
     useEffect(() => {
-        filterById(match.params.id);
-    }, [filterById, match.params.id]);
+        dispatch(filterByIdAction(match.params.id));
+    }, [dispatch, match.params.id]);
 
     const createMarkup = value => ({ __html: value });
 
-    const getWorkInfoSection = workItem => {
+    const getWorkSection = workItem => {
         const { title, description, images, links, tags } = workItem;
         const publicPatch = process.env.NODE_ENV === 'production' ? '/myportfolio' : '';
         const gallery = images.gallery.map(item => ({
@@ -62,26 +65,13 @@ const WorkInfo = ({ match, workItem, filterById }) => {
 
     return (
         <section id="work-info" className="work-info-section">
-            {workItem.length >= 1 && getWorkInfoSection(workItem[0])};
+            {filteredWorks.length >= 1 && getWorkSection(filteredWorks[0])};
         </section>
     );
 };
 
 WorkInfo.propTypes = {
     match: PropTypes.shape({}).isRequired,
-    workItem: PropTypes.array.isRequired,
-    filterById: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = state => ({
-    workItem: state.filter.works,
-});
-
-const mapDispatchToProps = dispatch => ({
-    filterById: id => dispatch(filterByIdAction(id)),
-});
-
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(WorkInfo);
+export default WorkInfo;

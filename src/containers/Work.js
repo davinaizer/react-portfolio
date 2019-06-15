@@ -1,32 +1,24 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 import { Container } from 'reactstrap';
 import { WorkList } from '../components';
 
 import './Work.scss';
 
-const Work = ({ workList }) => (
-    <section id="work" className="work-section">
-        <Container>
-            <div className="mb-5">
-                <h2 className="section__title">Work</h2>
-                <hr className="title__separator ml-0" />
-            </div>
+const Work = () => {
+    const workList = useSelector(state => state.config.workList);
 
-            <WorkList items={workList} />
-        </Container>
-    </section>
-);
-
-Work.propTypes = {
-    workList: PropTypes.array,
+    return (
+        <section id="work" className="work-section">
+            <Container>
+                <div className="mb-5">
+                    <h2 className="section__title">Work</h2>
+                    <hr className="title__separator ml-0" />
+                </div>
+                <WorkList items={workList} />
+            </Container>
+        </section>
+    );
 };
 
-const mapStateToProps = state => {
-    return {
-        workList: state.config.workList,
-    };
-};
-
-export default connect(mapStateToProps)(Work);
+export default Work;

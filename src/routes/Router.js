@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
+import { useSelector, useDispatch } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import { getConfigData } from '../utils/ConfigHelper';
@@ -29,10 +28,13 @@ const routes = [
     { path: '/contact', title: 'Contact', Component: Contact },
 ];
 
-const Router = ({ setConfig, isDataLoaded }) => {
+const Router = () => {
+    const dispatch = useDispatch();
+    const isDataLoaded = useSelector(state => state.config.isDataLoaded);
+
     useEffect(() => {
-        setConfig(getConfigData());
-    }, [setConfig]);
+        dispatch(setConfigAction(getConfigData()));
+    }, [dispatch]);
 
     return (
         <BrowserRouter basename={publicPath}>
@@ -63,20 +65,4 @@ const Router = ({ setConfig, isDataLoaded }) => {
     );
 };
 
-Router.propTypes = {
-    setConfig: PropTypes.func.isRequired,
-    isDataLoaded: PropTypes.bool.isRequired,
-};
-
-const mapStateToProps = state => ({
-    isDataLoaded: state.config.isDataLoaded,
-});
-
-const mapDispatchToProps = dispatch => ({
-    setConfig: data => dispatch(setConfigAction(data)),
-});
-
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(Router);
+export default Router;
