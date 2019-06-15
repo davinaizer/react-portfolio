@@ -22,7 +22,7 @@ const WorkInfo = ({ match }) => {
 
     const getWorkSection = workItem => {
         const { title, description, images, links, tags } = workItem;
-        const publicPatch = process.env.NODE_ENV === 'production' ? '/myportfolio' : '';
+        const publicPatch = process.env.NODE_ENV === 'production' ? '/react-portfolio' : '';
         const gallery = images.gallery.map(item => ({
             src: publicPatch + item,
             caption: '',

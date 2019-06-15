@@ -9,7 +9,7 @@ import { ScrollToTop, Spinner, WorkInfo } from '../components';
 import { About, Home, Contact, Resume, Work, Navbar } from '../containers';
 
 // remote server base path
-const publicPath = process.env.NODE_ENV === 'production' ? '/myportfolio' : null;
+const publicPath = process.env.NODE_ENV === 'production' ? '/react-portfolio' : null;
 const routes = [
     { path: '/', title: 'Home', Component: Home, isVisible: false },
     { path: '/about', title: 'About', Component: About },

@@ -6,7 +6,7 @@ import TagList from './TagList';
 
 import './WorkItem.scss';
 
-const publicPatch = process.env.NODE_ENV === 'production' ? '/myportfolio' : '.';
+const publicPatch = process.env.NODE_ENV === 'production' ? '/react-portfolio' : '.';
 
 const WorkItem = ({ id, thumb, title, summary, tags, isFlipped }) => (
     <Row noGutters className="work-item">
