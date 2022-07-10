@@ -5,7 +5,6 @@ import { SocialIcon } from '../components';
 import './Contact.scss';
 
 import icon0 from '../assets/social_envelope-square.svg';
-import icon1 from '../assets/social_facebook.svg';
 import icon2 from '../assets/social_linkedin.svg';
 import icon3 from '../assets/social_github.svg';
 
@@ -26,10 +25,6 @@ const Contact = () => (
       <Row>
         <Col className="my-5">
           <SocialIcon icon={icon0} href={'mailto:davi.naizer@gmail.com'} />
-          <SocialIcon
-            icon={icon1}
-            href={'https://www.facebook.com/davi.naizer'}
-          />
           <SocialIcon
             icon={icon2}
             href={'https://www.linkedin.com/in/davi-naizer'}
