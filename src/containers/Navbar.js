@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap';
+import {
+  Container,
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  Nav,
+  NavItem
+} from 'reactstrap';
 
 import './Navbar.scss';
 
@@ -12,19 +19,19 @@ export default class TopNav extends Component {
     this.toggle = this.toggle.bind(this);
     this.close = this.close.bind(this);
     this.state = {
-      isOpen: false,
+      isOpen: false
     };
   }
 
   toggle() {
     this.setState({
-      isOpen: !this.state.isOpen,
+      isOpen: !this.state.isOpen
     });
   }
 
   close() {
     this.setState({
-      isOpen: false,
+      isOpen: false
     });
   }
 
@@ -33,8 +40,8 @@ export default class TopNav extends Component {
     const navLinks = links.filter(item => item.isVisible !== false);
 
     return (
-      <div>
-        <Navbar className="app-navbar" fixed="top" expand="md">
+      <Navbar className="app-navbar" fixed="top" expand="md">
+        <Container>
           <NavLink to="/" className="navbar-brand" activeClassName="">
             <p>DN</p>
           </NavLink>
@@ -55,12 +62,12 @@ export default class TopNav extends Component {
               ))}
             </Nav>
           </Collapse>
-        </Navbar>
-      </div>
+        </Container>
+      </Navbar>
     );
   }
 }
 
 TopNav.propTypes = {
-  links: PropTypes.array,
+  links: PropTypes.array
 };
