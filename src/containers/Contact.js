@@ -2,18 +2,16 @@ import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import { SocialIcon } from '../components';
 
-import './Contact.scss';
-
 import icon0 from '../assets/social_envelope-square.svg';
 import icon2 from '../assets/social_linkedin.svg';
 import icon3 from '../assets/social_github.svg';
 
 const Contact = () => (
-  <section id="contact" className="contact-section">
+  <section id="contact" className="content-section">
     <Container>
       <Row>
         <Col lg="8" className="">
-          <h2 className="section__title text-left">Contact</h2>
+          <h2 className="section__title">Contact</h2>
           <hr className="title__separator ml-0" />
           <p className="lead">
             If you want to reach me, feel free to email me or check my social

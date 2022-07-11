@@ -7,11 +7,11 @@ import pdfIcon from '../assets/file-pdf.svg';
 import pdfFile from '../assets/201810_cv_davi_naizer.pdf';
 
 const Resume = () => (
-  <section id="resume" className="resume-section">
-    <Container className="">
+  <section id="resume" className="content-section">
+    <Container>
       <Row>
         <Col lg="8" className="">
-          <h2 className="section__title text-left">Resume</h2>
+          <h2 className="section__title">Resume</h2>
           <hr className="title__separator ml-0" />
         </Col>
       </Row>

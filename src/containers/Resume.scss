@@ -1,16 +1,6 @@
 @import '../styles/variables';
 
-.resume-section {
-  background-attachment: fixed;
-  background-color: $eerie-black;
-  background-image: linear-gradient(rgba($black, 0), rgba($black, 1)),
-    url('../assets/black_noise_50.png');
-  background-position: right top;
-  background-repeat: no-repeat, repeat, no-repeat;
-  background-size: auto, auto, cover;
-
-  min-height: 100vh;
-
+.content-section {
   ul {
     list-style-type: none;
     padding: 0;

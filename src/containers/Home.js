@@ -5,25 +5,22 @@ import { Container, Row, Col, Button } from 'reactstrap';
 import './Home.scss';
 
 const Home = () => (
-  <header className="masthead">
+  <header className="content-section">
     <Container className="d-flex h-100">
       <Row>
         <Col sm="8">
-          <h1 className="mb-2">DAVI NAIZER</h1>
+          <h1 className="section__title">davi naizer</h1>
           <hr className="title__separator ml-0" />
-          <h2 className="mx-auto my-5">
-            E-learning &<br />
-            Front-end Developer
-          </h2>
+          <h2 className="mx-auto my-5">Javascript Developer</h2>
           <p>
             Hi, Iʼve been developing web and e-learning content for almost 18
-            years now. Throughout these years I had the pleasure to work on many
+            years now. Over all these years I had the pleasure to work on many
             projects along leading companies like Kraft Foods, Electrolux, Volvo
-            Motors, HSBC Bank, Furukawa Electric, GP Strategies, Metlife,
-            Boticário Group and many others.
+            Motors, HSBC Bank, Furukawa Electric, GP Strategies, Metlife, and
+            many others.
             <br />
             <br />
-            Please feel free to navigate and get to know more about me.
+            Please feel free to check a bit more about my me and my work.
           </p>
           <Link to="/about">
             <Button className="home__btn" color="primary" size="lg">

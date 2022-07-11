@@ -1,15 +1,13 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 
-import './About.scss';
-
 const About = () => (
-  <section id="about" className="about-section">
+  <section id="about" className="content-section">
     <Container>
-      <Row className="justify-content-end">
+      <Row>
         <Col md="6">
-          <h2 className="section__title text-right">About</h2>
-          <hr className="title__separator mr-0" />
+          <h2 className="section__title">About</h2>
+          <hr className="title__separator ml-0" />
           <p className="text-justify">
             I’m a simple person who enjoys simple things of life. A good coffee
             and a good music, and it’s all set to work. If I’m not coding,
